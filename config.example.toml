@@ -1,0 +1,20 @@
+# Copy to config.toml and fill in. config.toml is ignored by git - never commit real values.
+dry_run = true            # true = print messages to the console instead of Telegram
+
+[server]
+listen = "0.0.0.0"
+port = 8790
+token = "<RANDOM-STRING-MIN-16-CHARS>"   # sent by sources as X-Notify-Token header or ?token=
+timezone = "Europe/Vienna"
+digest_time = "07:30"                    # daily summary, empty string = off
+
+[telegram]
+bot_token = "<TELEGRAM-BOT-TOKEN>"       # from @BotFather
+chat_id = "<TELEGRAM-CHAT-ID>"
+
+[rules]
+dedupe_minutes = 15        # same source + host + title within N minutes -> sent once
+quiet_start = "22:00"      # quiet hours: only quiet_min_severity and above are sent
+quiet_end = "07:00"
+quiet_min_severity = "critical"
+min_severity = "ok"        # ok | info | warning | critical - below this: digest only

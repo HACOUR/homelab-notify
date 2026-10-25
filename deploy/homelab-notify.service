@@ -1,0 +1,20 @@
+[Unit]
+Description=homelab-notify - notification bridge
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=homelab-notify
+WorkingDirectory=/opt/homelab-notify
+ExecStart=/usr/bin/python3 -m homelab_notify -c /etc/homelab-notify/config.toml
+Restart=on-failure
+RestartSec=5
+# Hardening
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,1 @@
+{"heartbeat": {"status": 0, "msg": "timeout of 48000ms exceeded", "time": "2026-10-25 03:12:00"}, "monitor": {"name": "<WEBSITE>", "url": "https://<DOMAIN>"}, "msg": "[<WEBSITE>] [🔴 Down] timeout of 48000ms exceeded"}

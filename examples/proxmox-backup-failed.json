@@ -1,0 +1,1 @@
+{"title": "vzdump backup status (<NODE>): backup failed", "message": "CT <CT-ID> (<CT-NAME>): ERROR: no space left on device", "severity": "error", "timestamp": 1793001600, "fields": {"type": "vzdump", "hostname": "<NODE>", "job-id": "backup-<ID>"}}

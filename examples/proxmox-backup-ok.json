@@ -1,0 +1,1 @@
+{"title": "vzdump backup status (<NODE>): backup successful", "message": "All 4 guests backed up.", "severity": "info", "timestamp": 1793001900, "fields": {"type": "vzdump", "hostname": "<NODE>"}}
